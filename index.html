@@ -21,15 +21,19 @@
         <script src="js/respond.min.js"></script>S
     <![endif]-->
 </head>
+
+
+<audio id="miAudio" src="audio/ThousandYears.mp3" loop></audio>
+
+<script>
+  document.body.addEventListener("click", function() {
+    var miAudio = document.getElementById("miAudio");
+    miAudio.play();
+    document.body.removeEventListener("click", arguments.callee);
+  });
+</script>
+
 <body>
-    <!-- Audio
-    <audio autoplay loop>
-        <source src="archivo-audio.ogg" type="audio/ogg">
-        <source src="audio/ThousandYears.mp3" type="audio/mpeg">
-    </audio>-->
-
-    <audio autoplay src="audio/ThousandYears.mp3"></audio>
-
     <!-- Preloader -->
     <div class="preloader">
         <div class="lds-heart">
@@ -98,7 +102,7 @@
                     <div class="welcome-mt">
                         <div class="welcome-image-wrapper">
                             <div class="img">
-                                <a href="#" data-scroll-nav="1"><img src="images/Couple.png" alt=""></a>
+                                <a href="#" data-scroll-nav="1"><img src="images/couple.png" alt=""></a>
                             </div>
                         </div>
                     </div>
